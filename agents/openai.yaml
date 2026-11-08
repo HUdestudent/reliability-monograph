@@ -1,0 +1,4 @@
+interface:
+  display_name: "可靠性工程专著"
+  short_description: "通用可靠性工程专著的构思、目录、资料整合、章节写作、审校与排版"
+  default_prompt: "使用 $reliability-monograph，根据我的已有资料规划可靠性工程专著，并完成当前需要的章节写作、审校或排版。"

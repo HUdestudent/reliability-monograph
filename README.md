@@ -1,2 +1,73 @@
-# reliability-monograph
-Codex skill for reliability engineering monographs: planning, source integration, chapter writing, technical review, and formatting.
+# 可靠性工程专著 Skill
+
+面向中文通用可靠性工程专著的 Codex 技能，覆盖构思、目录、已有资料整合、章节写作、技术审校和排版。适合围绕寿命分布、可靠性分析、可靠性试验与维修等主题持续组织书稿。
+
+## 能做什么
+
+| 工作 | 主要内容 |
+| --- | --- |
+| 构思与目录 | 明确目标读者、全书主线、各章任务与章节依赖 |
+| 整理已有资料 | 将论文、笔记、数据和作者草稿对应到章节，记录来源与缺口 |
+| 撰写与续写 | 根据资料形成连贯正文，统一术语、符号及章间衔接 |
+| 技术审校 | 核查模型条件、推导、量纲、参数、算例和论述依据 |
+| 引用管理 | 区分已核验来源与待查线索，不补造文献、页码或标准条款 |
+| 格式整理 | 优先沿用作者或出版社模板，按需制作 Word、LaTeX 或 PDF |
+
+## 文件结构
+
+```text
+reliability-monograph/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── planning.md
+    ├── materials.md
+    ├── drafting.md
+    ├── technical-review.md
+    └── formatting.md
+```
+
+[SKILL.md](SKILL.md) 是技能入口。参考文件按任务需要读取，无须一次加载全部内容。
+
+## 安装
+
+下载本仓库，将包含 `SKILL.md`、`agents/` 和 `references/` 的文件夹命名为 `reliability-monograph`，放入本机 Codex 的技能目录。
+
+在本技能采用的本地配置中，默认目录为 `~/.codex/skills/`；如果已设置 `CODEX_HOME`，使用其下的 `skills/`。最终结构应为 `skills/reliability-monograph/SKILL.md`，并保留相邻的 `agents/` 和 `references/`。
+
+在已加载该技能的 Codex 对话中，可通过 `$reliability-monograph` 显式调用。
+
+## 使用示例
+
+### 从已有资料开始
+
+```text
+使用 $reliability-monograph。
+我的资料目录是：[填写实际路径]。
+请先盘点资料，提出专著定位和章节目次，
+建立资料与章节的对应关系，并说明当前缺口。
+```
+
+### 撰写指定章节
+
+```text
+使用 $reliability-monograph，根据我的目录和现有资料撰写第三章。
+沿用已有术语和符号，交代模型假设与适用边界。
+资料不足或引用尚未核验的事项单独列出。
+```
+
+### 审校与格式统一
+
+```text
+使用 $reliability-monograph，审校我提供的书稿，
+检查公式、符号、引用和章节衔接，
+再按我提供的出版社模板统一格式。
+请说明实际检查范围和未解决的问题。
+```
+
+## 持续完善
+
+提供一章满意的样稿、目标读者说明及格式模板，有助于明确写作习惯。先把反馈落实到当前书稿；需要今后沿用的通用偏好，再明确要求更新技能，并用新的材料检验效果。本书的正文、原始资料和项目决定保存在书稿项目中。
+
+技能强调区分作者结果、文献结论和演示性算例。计算、引用核验及文档渲染取决于当前可用资料与工具，交付时应说明已实际完成的核验范围。
