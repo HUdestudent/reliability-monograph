@@ -1,6 +1,6 @@
 # 可靠性工程专著 Skill
 
-面向中文通用可靠性工程专著的 Codex 技能，覆盖构思、目录、已有资料整合、章节写作、技术审校和排版。适合围绕寿命分布、可靠性分析、可靠性试验与维修等主题持续组织书稿。
+面向中文通用可靠性工程专著的写作技能，覆盖构思、目录、已有资料整合、章节写作、技术审校和排版。适合围绕寿命分布、可靠性分析、可靠性试验与维修等主题持续组织书稿。
 
 单个概念答疑或普通论文润色不自动启动整书流程，详见 SKILL.md 的「触发边界」。
 
@@ -35,11 +35,11 @@ reliability-monograph/
 
 ## 安装
 
-下载本仓库，将包含 `SKILL.md`、`agents/` 和 `references/` 的文件夹命名为 `reliability-monograph`，放入本机 Codex 的技能目录。
+下载本仓库，将包含 `SKILL.md`、`agents/` 和 `references/` 的文件夹命名为 `reliability-monograph`，放入所用 Agent 支持的技能目录。
 
-在本技能采用的本地配置中，默认目录为 `~/.codex/skills/`；如果已设置 `CODEX_HOME`，使用其下的 `skills/`。最终结构应为 `skills/reliability-monograph/SKILL.md`，并保留相邻的 `agents/` 和 `references/`。
+技能目录的位置以所用 Agent 的配置为准。将 `SKILL.md` 保留在 `reliability-monograph/` 根目录，并保留相邻的 `agents/` 和 `references/`，确保参考文件的相对路径有效。
 
-在已加载该技能的 Codex 对话中，可通过 `$reliability-monograph` 显式调用。
+在支持 `$技能名` 调用方式且已加载本技能的 Agent 中，可通过 `$reliability-monograph` 显式调用。其他环境可让 Agent 读取 `SKILL.md`，并按任务需要读取其中链接的参考文件。
 
 ## 使用示例
 
