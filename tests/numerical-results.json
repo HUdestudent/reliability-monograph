@@ -1,0 +1,23 @@
+{
+  "python": "3.10.5",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "scipy": "1.15.3",
+  "method": "scipy.integrate.quad, interval [0, infinity)",
+  "eta_h": 2.0,
+  "epsabs": 1e-12,
+  "epsrel": 1e-12,
+  "before_integral": 2.0,
+  "before_estimated_abs_error": 1.3689773035085303e-12,
+  "before_integral_unit": "h (integrand is dimensionless)",
+  "after_integral": 1.0,
+  "after_estimated_abs_error": 6.844886517542652e-13,
+  "after_integral_unit": "dimensionless",
+  "D_illustrative_gamma_shape": 2,
+  "D_illustrative_gamma_scale_h": 500.0,
+  "D_illustrative_gamma_mean_h": 1000.0,
+  "D_illustrative_hazards_per_h": {
+    "0.0": 0.0,
+    "500.0": 0.001,
+    "1000.0": 0.0013333333333333333
+  }
+}
